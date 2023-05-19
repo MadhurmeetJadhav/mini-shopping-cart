@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.scss";
-
+import { GiHamburgerMenu } from "react-icons/gi";
+import { HiOutlineArrowRight } from "react-icons/hi2";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import SearchBar from "../SearchBar/SearchBar";
 const Header = () => {
+  const [burger, setBurger] = useState(false);
   return (
     <div className="header-container">
-      <div className="header-design">
+      {/* <div className="header-design">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
             fill="#e9ecef   "
@@ -15,9 +20,36 @@ const Header = () => {
       </div>
       <div className="header-title">
         <h1>E-SHooooP</h1>
+      </div> */}
+
+      <Link to={"./"} className="header-title">
+        <p>e-Shop</p>
+      </Link>
+
+      <SearchBar />
+      <div className="burger-icon" onClick={() => setBurger(true)}>
+        <GiHamburgerMenu className="icons" />
       </div>
+      <BurgerNav className="burger-nav" show={burger}>
+        <HiOutlineArrowRight
+          className="back-icon"
+          onClick={() => setBurger(false)}
+        />
+
+        <div>
+          <Link> My Prof </Link>
+          <Link></Link>
+          <Link></Link>
+          <Link></Link>
+        </div>
+      </BurgerNav>
     </div>
   );
 };
 
 export default Header;
+
+const BurgerNav = styled.div`
+  transform: ${(props) => (props.show ? "translateX(0)" : "translateX(100%)")};
+  transition: transform 0.2s ease-in;
+`;

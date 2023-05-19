@@ -1,7 +1,14 @@
 import React from "react";
+import "./PageNotFound.scss";
 
 const PageNotFound = () => {
-  return <div>PageNotFound</div>;
+  console.log("Page");
+
+  return (
+    <div className="error">
+      <p>No Data Available....</p>
+    </div>
+  );
 };
 
 export default PageNotFound;

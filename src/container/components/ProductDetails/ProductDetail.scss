@@ -9,10 +9,20 @@ img {
   width: 90%;
   height: 90%;
 }
+
+.Show-more {
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.Show-more:hover {
+  font-size: 24px;
+}
 img {
   object-fit: contain;
 }
-button {
+.buttons button {
   background-color: rgb(255, 255, 255);
   border: 3px solid black;
   padding: 8px 26px;
@@ -24,7 +34,7 @@ button {
   margin-top: 30px;
 }
 
-button:hover {
+.buttons button:hover {
   transform: translate(-2px, -1px);
   box-shadow: 7px 7px 1px rgb(0, 0, 0);
   transition: all 0.2s ease-in;
@@ -62,4 +72,39 @@ p {
   font-size: 34px;
   font-weight: 600;
   margin-top: 20px;
+}
+.pop-up-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pop-up-card {
+  width: 950px;
+  margin: 0 auto;
+  height: 400px;
+}
+.pop-up-icon {
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  display: flex;
+  align-items: center;
+}
+.back-icon {
+  width: 34px;
+  height: 34px;
+  fill: white;
+}
+.Pop-tet {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  cursor: pointer;
 }

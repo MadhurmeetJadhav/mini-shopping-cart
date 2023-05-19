@@ -11,7 +11,7 @@ const ProductListing = () => {
   // console.log(Products);
   const fetchingProducts = async () => {
     const response = await axios
-      .get("https://dummyjson.com/products?limit=100")
+      .get("https://dummyjson.com/products?limit=20")
       .catch((err) => {
         console.log(err);
       });

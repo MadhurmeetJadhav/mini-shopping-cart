@@ -14,7 +14,8 @@
   height: 354px;
   background: $secondary-color;
   border: solid 4px #333;
-  box-shadow: -5px 5px #333;
+  border-radius: 8px;
+  box-shadow: -5px 5px #939292;
   transition: all 0.2s ease-in-out;
   display: flex;
   justify-content: center;
@@ -24,7 +25,7 @@
 
 .card:hover {
   margin: 10px 10px 0 0;
-  box-shadow: 0px 0px #333;
+  box-shadow: 0px 0px #939292;
 }
 
 .card .img-card {

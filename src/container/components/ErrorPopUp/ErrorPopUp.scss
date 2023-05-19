@@ -1,0 +1,38 @@
+.error-container {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modalpop {
+  background: white;
+  width: 250px;
+  padding: 20px 10px;
+  border-radius: 4px;
+  position: relative;
+  animation: "droptop .3s linear";
+}
+
+.errorTet {
+  padding: 20px 30px;
+}
+.errorTet p {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: 4px;
+}
+.cross-icon {
+  height: 34px;
+  width: 34px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}

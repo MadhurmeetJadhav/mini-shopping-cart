@@ -1,24 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ProductDetail.scss";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { FaStar } from "react-icons/fa";
+import ShowProductDetails from "../ShowProductDetails/ShowProductDetails";
+import { TiArrowBack } from "react-icons/ti";
 
 const ProductDetails = () => {
   const { productId } = useParams();
 
-  console.log(productId);
+  const [popUpToggle, SetPopUpToggle] = useState(false);
+
+  const popUp = (res) => {
+    SetPopUpToggle(res);
+  };
+
   const product = useSelector((state) => state.allProducts.products);
   const list = product.filter((products) => {
     return products.id == productId;
   });
   console.log(list);
+  const imagesList = list.map((product) => {
+    return product.images;
+  });
   const renderList = list.map((product) => {
     return (
       <div className="Product-Container">
         <div className="image-contianer">
           <div className="image">
             <img src={`${product.images[0]}`} />
+          </div>
+          <div className="Show-more" onClick={() => popUp(true)}>
+            Show More +
           </div>
         </div>
         <div className="detail-container">
@@ -50,7 +63,22 @@ const ProductDetails = () => {
     );
   });
 
-  return <>{renderList}</>;
+  return (
+    <>
+      {renderList}
+      {popUpToggle && (
+        <div className="pop-up-container">
+          <div className="pop-up-icon" onClick={() => popUp(false)}>
+            {/* <TiArrowBack className="back-icon" /> */}
+            <p className="Pop-tet">Back</p>
+          </div>
+          <div className="pop-up-card">
+            <ShowProductDetails images={imagesList} />
+          </div>
+        </div>
+      )}
+    </>
+  );
 };
 
 export default ProductDetails;
