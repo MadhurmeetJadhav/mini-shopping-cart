@@ -83,3 +83,153 @@
   font-size: 14px;
   margin: 5px;
 }
+@media screen and (min-width: 320px) and (max-width: 374px) {
+  .ProductDetails-Container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 120px);
+    row-gap: 10px;
+    column-gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  .card {
+    position: relative;
+    width: 100px;
+    height: 154px;
+    background: $secondary-color;
+    border: solid 3px #333;
+    border-radius: 6px;
+    box-shadow: -3px 3px #939292;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    margin: 15px;
+  }
+
+  .card .info-card p {
+    font-size: 10px;
+    margin: 1.5px;
+  }
+}
+@media screen and (min-width: 374px) and (max-width: 424px) {
+  .ProductDetails-Container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 140px);
+    row-gap: 15px;
+    column-gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  .card {
+    position: relative;
+    width: 120px;
+    height: 214px;
+    background: $secondary-color;
+    border: solid 3px #333;
+    border-radius: 6px;
+    box-shadow: -3px 3px #939292;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    margin: 12px;
+  }
+
+  .card .info-card p {
+    font-size: 10.5px;
+    margin: 1.5px;
+  }
+}
+@media screen and (min-width: 424px) and (max-width: 767px) {
+  .ProductDetails-Container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 140px);
+    row-gap: 15px;
+    column-gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  .card {
+    position: relative;
+    width: 120px;
+    height: 214px;
+    background: $secondary-color;
+    border: solid 3px #333;
+    border-radius: 6px;
+    box-shadow: -3px 3px #939292;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    margin: 12px;
+  }
+
+  .card .info-card p {
+    font-size: 10.5px;
+    margin: 1.5px;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .ProductDetails-Container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 180px);
+    row-gap: 18px;
+    column-gap: 23px;
+    align-items: center;
+    justify-content: center;
+  }
+  .card {
+    position: relative;
+    width: 160px;
+    height: 244px;
+    background: $secondary-color;
+    border: solid 3px #333;
+    border-radius: 6px;
+    box-shadow: -3px 3px #939292;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    margin: 12px;
+  }
+
+  .card .info-card p {
+    font-size: 10.5px;
+    margin: 1.5px;
+  }
+}
+@media screen and (min-width: 1023px) and (max-width: 1339px) {
+  .ProductDetails-Container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 240px);
+    row-gap: 28px;
+    column-gap: 23px;
+    align-items: center;
+    justify-content: center;
+  }
+  .card {
+    position: relative;
+    width: 180px;
+    height: 264px;
+    background: $secondary-color;
+    border: solid 3px #333;
+    border-radius: 8px;
+    box-shadow: -3px 3px #939292;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    margin: 14px;
+  }
+
+  .card .info-card p {
+    font-size: 10.5px;
+    margin: 1.5px;
+  }
+}

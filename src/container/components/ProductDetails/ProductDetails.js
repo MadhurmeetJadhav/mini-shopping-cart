@@ -5,6 +5,13 @@ import { useSelector } from "react-redux";
 import { FaStar } from "react-icons/fa";
 import ShowProductDetails from "../ShowProductDetails/ShowProductDetails";
 import { TiArrowBack } from "react-icons/ti";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { EffectCoverflow, Pagination, Navigation } from "swiper";
+import ImgCorousal from "../ImgCorousal/ImgCorousal";
 
 const ProductDetails = () => {
   const { productId } = useParams();
@@ -19,7 +26,7 @@ const ProductDetails = () => {
   const list = product.filter((products) => {
     return products.id == productId;
   });
-  console.log(list);
+  // console.log(list);
   const imagesList = list.map((product) => {
     return product.images;
   });
@@ -28,11 +35,50 @@ const ProductDetails = () => {
       <div className="Product-Container">
         <div className="image-contianer">
           <div className="image">
-            <img src={`${product.images[0]}`} />
+            {/* <img src={`${product.images[0]}`} /> */}
+            {/* <Swiper
+              effect={"coverflow"}
+              grabCursor={true}
+              centeredSlides={true}
+              loop={true}
+              slidesPerView={"auto"}
+              coverflowEffect={{
+                rotate: 20,
+                strech: 25,
+                depth: 100,
+                modifier: 1,
+              }}
+              pagination={{ el: ".swiper-pagination", clickable: true }}
+              navigation={{
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              }}
+              modules={[EffectCoverflow, Pagination, Navigation]}
+              className="Swiper-Container"
+            >
+              {product.images.map((img, i) => {
+                return (
+                  <SwiperSlide className="swiper-slide">
+                    <img src={img} alt="Slider " />
+                  </SwiperSlide>
+                );
+              })}
+
+              <div className="slider-controller">
+                <div className="swiper-button-prev slider-arrow">
+                  
+                </div>
+                <div className="swiper-button-next slider-arrow">
+                  
+                </div>
+                <div className="swiper-pagination"> </div>
+              </div>
+            </Swiper> */}
+            <ImgCorousal imgL={product.images} />
           </div>
-          <div className="Show-more" onClick={() => popUp(true)}>
+          {/* <div className="Show-more" onClick={() => popUp(true)}>
             Show More +
-          </div>
+          </div> */}
         </div>
         <div className="detail-container">
           <div className="product-title">

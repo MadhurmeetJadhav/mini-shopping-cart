@@ -8,7 +8,7 @@ import ErrorPopUp from "../ErrorPopUp/ErrorPopUp";
 
 const SearchBar = () => {
   const product = useSelector((state) => state.allProducts.products);
-  console.log(product);
+  // console.log(product);
 
   const [data, setData] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
